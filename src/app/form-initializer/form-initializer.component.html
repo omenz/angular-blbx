@@ -1,0 +1,9 @@
+<div class="panel">
+  <form [formGroup]="form">
+    <div class="form-group">
+      <label>Load data from url</label>
+      <input formControlName="dataUrl"/>
+    </div>
+    <button class="btn btn-primary" [routerLink]="['/form', dataUrl()]">open form</button>
+  </form>
+</div>
