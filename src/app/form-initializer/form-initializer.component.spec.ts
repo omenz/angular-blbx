@@ -1,6 +1,10 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { FormInitializerComponent } from './form-initializer.component';
+import {FormInitializerComponent} from './form-initializer.component';
+import {AppRoutingModule} from '../app-routing.module';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
+import {FormComponent} from '../form/form.component';
 
 describe('FormInitializerComponent', () => {
   let component: FormInitializerComponent;
@@ -8,9 +12,15 @@ describe('FormInitializerComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FormInitializerComponent ]
+      imports: [
+        FormsModule,
+        ReactiveFormsModule,
+        AppRoutingModule,
+        HttpClientModule,
+      ],
+      declarations: [FormInitializerComponent, FormComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

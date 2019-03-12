@@ -5,9 +5,7 @@ import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {Widget, Widgets, WidgetType} from '../domain/widget';
 
-const testWidgets: Widgets = {
-  widgets: [new Widget(1, 'pew pew', WidgetType.FORM, [])]
-};
+const testWidgets: Widgets = new Widgets([new Widget(1, 'pew pew', WidgetType.FORM, [])]);
 
 describe('WidgetsService', () => {
   beforeEach(() => TestBed.configureTestingModule({
