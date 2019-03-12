@@ -9,6 +9,7 @@ import { SectionComponent } from './form/section/section.component';
 import { CurrencyComponent } from './form/controls/currency/currency.component';
 import { FormInitializerComponent } from './form-initializer/form-initializer.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,15 +17,16 @@ import { ReactiveFormsModule } from '@angular/forms';
     FormComponent,
     SectionComponent,
     CurrencyComponent,
-    FormInitializerComponent
+    FormInitializerComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
