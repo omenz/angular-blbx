@@ -1,6 +1,6 @@
 import {async, inject, TestBed} from '@angular/core/testing';
 
-import { WidgetsService } from './widgets.service';
+import {WidgetsService} from './widgets.service';
 import {HttpClient, HttpClientModule} from '@angular/common/http';
 import {HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
 import {Widget, Widgets, WidgetType} from '../domain/widget';

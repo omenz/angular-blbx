@@ -7,8 +7,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <div class="modal-body">
+      <div class="modal-body" *ngIf="(widgets | async) as widgets">
         <p>{{ dataUrl }}</p>
+        <p>{{ stringify(widgets) }}</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
