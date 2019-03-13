@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { FormComponent } from './form/form.component';
-import { FormInitializerComponent } from './form-initializer/form-initializer.component';
+import { WidgetsComponent } from './widgets/widgets.component';
+import { WidgetsInitializerComponent } from './widgets-initializer/widgets-initializer.component';
 
 const routes: Routes = [
-  {path: 'form/:dataurl', component: FormComponent},
-  {path: '', component: FormInitializerComponent},
+  {path: 'form/:dataurl', component: WidgetsComponent},
+  {path: '', component: WidgetsInitializerComponent},
 ];
 
 @NgModule({

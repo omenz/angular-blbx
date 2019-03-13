@@ -3,10 +3,10 @@ import {FormControl, FormGroup} from '@angular/forms';
 
 @Component({
   selector: 'app-form-initializer',
-  templateUrl: './form-initializer.component.html',
-  styleUrls: ['./form-initializer.component.scss']
+  templateUrl: './widgets-initializer.component.html',
+  styleUrls: ['./widgets-initializer.component.scss']
 })
-export class FormInitializerComponent implements OnInit {
+export class WidgetsInitializerComponent implements OnInit {
   form = new FormGroup({
     dataUrl: new FormControl()
   });

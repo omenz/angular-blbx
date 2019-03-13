@@ -1,14 +1,14 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import {FormComponent} from './form.component';
+import {WidgetsComponent} from './widgets.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {AppRoutingModule} from '../app-routing.module';
-import {FormInitializerComponent} from '../form-initializer/form-initializer.component';
+import {WidgetsInitializerComponent} from '../widgets-initializer/widgets-initializer.component';
 import {HttpClientModule} from '@angular/common/http';
 
-describe('FormComponent', () => {
-  let component: FormComponent;
-  let fixture: ComponentFixture<FormComponent>;
+describe('WidgetsComponent', () => {
+  let component: WidgetsComponent;
+  let fixture: ComponentFixture<WidgetsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -18,13 +18,13 @@ describe('FormComponent', () => {
         AppRoutingModule,
         HttpClientModule,
       ],
-      declarations: [ FormComponent, FormInitializerComponent ]
+      declarations: [ WidgetsComponent, WidgetsInitializerComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FormComponent);
+    fixture = TestBed.createComponent(WidgetsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -1,50 +1,70 @@
 export class Widgets {
-  constructor(private widgets: Array<Widget>) {
+  widgets: Array<Widget>;
+
+  constructor(widgets: Array<Widget>) {
+    this.widgets = widgets;
   }
 }
 
 export class Widget {
-  constructor(
-    private id: number,
-    private name: string,
-    private type: WidgetType,
-    private items: Array<Section>,
-  ) {
+  id: number;
+  name: string;
+  type: WidgetType;
+  items: Array<Section>;
+
+  constructor(id: number, name: string, type: WidgetType, items: Array<Section>) {
+    this.id = id;
+    this.name = name;
+    this.type = type;
+    this.items = items;
   }
 }
 
 export class Section {
-  constructor(
-    private type: SectionType,
-    private header: string,
-    private columns: number,
-    private items: Array<Control>,
-  ) {
+  type: SectionType;
+  header: string;
+  columns: number;
+  items: Array<Control>;
+
+  constructor(type: SectionType, header: string, columns: number, items: Array<Control>) {
+    this.type = type;
+    this.header = header;
+    this.columns = columns;
+    this.items = items;
   }
 }
 
 export class Control {
-  constructor(
-    private type: ControlType,
-    private label: string,
-    private value: string,
-    private required: boolean,
-    private symbol: CurrencySymbol,
-    private precision: number,
-  ) {
+  type: ControlType;
+  label: string;
+  value: string;
+  required: boolean;
+  symbol: CurrencySymbol;
+  precision: number;
+
+  constructor(type: ControlType, label: string, value: string, required: boolean, symbol: CurrencySymbol, precision: number) {
+    this.type = type;
+    this.label = label;
+    this.value = value;
+    this.required = required;
+    this.symbol = symbol;
+    this.precision = precision;
   }
 }
 
 export enum WidgetType {
   FORM = 'form',
 }
+
 export enum SectionType {
   SECTION = 'section',
 }
+
 export enum CurrencySymbol {
   EUR = 'EUR',
   USD = 'USD',
 }
+
 export enum ControlType {
   INPUT = 'input',
   CURRENCY = 'currency',

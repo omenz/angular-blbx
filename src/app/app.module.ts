@@ -4,20 +4,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { FormComponent } from './form/form.component';
-import { SectionComponent } from './form/section/section.component';
-import { CurrencyComponent } from './form/controls/currency/currency.component';
-import { FormInitializerComponent } from './form-initializer/form-initializer.component';
+import { WidgetsComponent } from './widgets/widgets.component';
+import { WidgetsInitializerComponent } from './widgets-initializer/widgets-initializer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormComponent,
-    SectionComponent,
-    CurrencyComponent,
-    FormInitializerComponent,
+    WidgetsComponent,
+    WidgetsInitializerComponent,
   ],
   imports: [
     BrowserModule,
