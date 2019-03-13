@@ -8,12 +8,14 @@ import { WidgetsComponent } from './widgets/widgets.component';
 import { WidgetsInitializerComponent } from './widgets-initializer/widgets-initializer.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { WidgetComponent } from './widgets/widget/widget.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     WidgetsComponent,
     WidgetsInitializerComponent,
+    WidgetComponent,
   ],
   imports: [
     BrowserModule,

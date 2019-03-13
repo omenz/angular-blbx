@@ -5,6 +5,7 @@ import {AppRoutingModule} from '../app-routing.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {WidgetsComponent} from '../widgets/widgets.component';
+import {WidgetComponent} from '../widgets/widget/widget.component';
 
 describe('WidgetsInitializerComponent', () => {
   let component: WidgetsInitializerComponent;
@@ -18,7 +19,7 @@ describe('WidgetsInitializerComponent', () => {
         AppRoutingModule,
         HttpClientModule,
       ],
-      declarations: [WidgetsInitializerComponent, WidgetsComponent]
+      declarations: [WidgetsInitializerComponent, WidgetsComponent, WidgetComponent]
     })
       .compileComponents();
   }));

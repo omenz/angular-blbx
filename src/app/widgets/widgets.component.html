@@ -8,7 +8,7 @@
         </button>
       </div>
       <div class="modal-body" *ngIf="(widgets | async) as widgets">
-        <p>{{ stringify(widgets) }}</p>
+          <app-widget *ngFor="let widget of widgets.widgets" [widget]="widget"></app-widget>
       </div>                    
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
