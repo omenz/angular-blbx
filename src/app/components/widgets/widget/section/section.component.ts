@@ -8,15 +8,13 @@ import {Control, Section} from '../../../../core/domain/widget';
 })
 export class SectionComponent implements OnInit {
   @Input() section: Section;
-  controlColumns: Array[Control[]];
+  controlColumns: Array[Control[]] = [];
   constructor() { }
 
   ngOnInit() {
-    console.log('Section initialized: ');
-    console.log(this.section);
-    this.splitByColumns();
+    this.splitControlsByColumns();
   }
-  private splitByColumns() {
+  private splitControlsByColumns() {
     const columns = this.section.columns;
     const controls = this.section.items;
     const controlCount = controls.length;
