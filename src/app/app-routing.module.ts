@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { WidgetsComponent } from './widgets/widgets.component';
-import { WidgetsInitializerComponent } from './widgets-initializer/widgets-initializer.component';
+import { WidgetsComponent } from './components/widgets/widgets.component';
+import { WidgetsInitializerComponent } from './components/widgets-initializer/widgets-initializer.component';
 
 const routes: Routes = [
   {path: 'form/:dataurl', component: WidgetsComponent},

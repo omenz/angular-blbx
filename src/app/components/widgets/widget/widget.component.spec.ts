@@ -1,7 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { WidgetComponent } from './widget.component';
-import {Widget, WidgetType} from '../../core/domain/widget';
+import {WidgetComponent} from './widget.component';
+import {Widget, WidgetType} from '../../../core/domain/widget';
+import {SectionComponent} from './section/section.component';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -9,9 +10,9 @@ describe('WidgetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ WidgetComponent ]
+      declarations: [WidgetComponent, SectionComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

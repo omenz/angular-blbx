@@ -2,10 +2,12 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import {WidgetsComponent} from './widgets.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import {AppRoutingModule} from '../app-routing.module';
+import {AppRoutingModule} from '../../app-routing.module';
 import {WidgetsInitializerComponent} from '../widgets-initializer/widgets-initializer.component';
 import {HttpClientModule} from '@angular/common/http';
 import {WidgetComponent} from './widget/widget.component';
+import {SectionComponent} from './widget/section/section.component';
+import {APP_BASE_HREF} from '@angular/common';
 
 describe('WidgetsComponent', () => {
   let component: WidgetsComponent;
@@ -19,7 +21,15 @@ describe('WidgetsComponent', () => {
         AppRoutingModule,
         HttpClientModule,
       ],
-      declarations: [ WidgetsComponent, WidgetsInitializerComponent, WidgetComponent ]
+      declarations: [
+        WidgetsComponent,
+        WidgetsInitializerComponent,
+        WidgetComponent,
+        SectionComponent,
+      ],
+      providers: [
+        {provide: APP_BASE_HREF, useValue: '/'}
+      ]
     })
     .compileComponents();
   }));

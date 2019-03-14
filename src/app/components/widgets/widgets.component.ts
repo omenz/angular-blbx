@@ -1,9 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {WidgetsService} from '../core/services/widgets.service';
-import {Widgets} from '../core/domain/widget';
+import {WidgetsService} from '../../core/services/widgets.service';
+import {Widgets} from '../../core/domain/widget';
 import {Observable} from 'rxjs';
-import {map} from 'rxjs/operators';
 
 @Component({
   selector: 'app-form',

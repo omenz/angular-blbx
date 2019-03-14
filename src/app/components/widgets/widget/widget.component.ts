@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Widget} from '../../core/domain/widget';
+import {Widget} from '../../../core/domain/widget';
 
 @Component({
   selector: 'app-widget',
