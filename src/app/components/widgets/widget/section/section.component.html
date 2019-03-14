@@ -1,3 +1,17 @@
 <p>
   Section: {{ section.header }}
 </p>
+<form>
+  <div class="form-row">
+    <div class="col" *ngFor="let dummy of ' '.repeat(section.columns).split(''), let idx = index">
+      <div class="form-group" *ngFor="let control of controlColumns[idx]">
+        <label>{{ control.label }}</label>
+        <input type="text"
+               class="form-control"
+               value="{{ control.value }}"
+               placeholder="City" />
+      </div>
+    </div>
+  </div>
+</form>
+
