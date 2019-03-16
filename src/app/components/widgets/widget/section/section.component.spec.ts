@@ -2,6 +2,8 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
 import {SectionComponent} from './section.component';
 import {Section, SectionType} from '../../../../core/domain/widget';
+import {CurrencyComponent} from '../../../controls/currency/currency.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 describe('SectionComponent', () => {
   let component: SectionComponent;
@@ -9,7 +11,14 @@ describe('SectionComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [SectionComponent]
+      imports: [
+        FormsModule,
+        ReactiveFormsModule,
+      ],
+      declarations: [
+        SectionComponent,
+        CurrencyComponent,
+      ]
     })
       .compileComponents();
   }));

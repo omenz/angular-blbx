@@ -9,6 +9,7 @@
             <input type="text"
                    class="form-control"
                    value="{{ control.value }}"
+                   [attr.required]="control.required"
                    placeholder="City" />
           </div>
           <app-currency *ngIf="control.type == currencyType" [control]="control"></app-currency>

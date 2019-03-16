@@ -7,6 +7,7 @@ import {AppRoutingModule} from '../../../app-routing.module';
 import {WidgetsComponent} from '../widgets.component';
 import {WidgetsInitializerComponent} from '../../widgets-initializer/widgets-initializer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {CurrencyComponent} from '../../controls/currency/currency.component';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -19,7 +20,13 @@ describe('WidgetComponent', () => {
         FormsModule,
         ReactiveFormsModule,
       ],
-      declarations: [WidgetsInitializerComponent, WidgetsComponent, WidgetComponent, SectionComponent]
+      declarations: [
+        WidgetsInitializerComponent,
+        WidgetsComponent,
+        WidgetComponent,
+        SectionComponent,
+        CurrencyComponent,
+      ]
     })
       .compileComponents();
   }));

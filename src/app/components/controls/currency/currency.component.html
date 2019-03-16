@@ -1,5 +1,7 @@
 <div class="form-group">
   <label>{{ control.label }}</label>
-  <input type="text" class="form-control" value="{{ control.value }}"/>
-  <span class="currency-sign">€</span>
+  <input type="text" class="form-control" ngModel="{{ formattedValue }}"
+         [attr.required]="control.required"
+         (blur)="onUpdate($event.target.value, $event.target)"/>
+  <span class="currency-sign">{{ currencySign }}</span>
 </div>
