@@ -4,6 +4,7 @@ import {SectionComponent} from './section.component';
 import {Section, SectionType} from '../../../../core/domain/widget';
 import {CurrencyComponent} from '../../../controls/currency/currency.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import {InputComponent} from '../../../controls/input/input.component';
 
 describe('SectionComponent', () => {
   let component: SectionComponent;
@@ -18,6 +19,7 @@ describe('SectionComponent', () => {
       declarations: [
         SectionComponent,
         CurrencyComponent,
+        InputComponent,
       ]
     })
       .compileComponents();

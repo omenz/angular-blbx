@@ -23,7 +23,9 @@ export class CurrencyComponent implements OnInit {
   private static formatCurrency(value: string, precision: number): string {
     let result: string;
     const clearNonDigitsCharacters = value.replace(/[^0-9.]+/g, '');
-    if (precision) {
+    if (!clearNonDigitsCharacters) {
+      result = '';
+    } else if (precision) {
       const withPrecision = parseFloat(clearNonDigitsCharacters).toFixed(precision);
       result = CurrencyComponent.formatNumberWithCommas(withPrecision);
     } else {

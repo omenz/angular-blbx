@@ -22,11 +22,14 @@ describe('CurrencyComponent', () => {
   beforeEach(() => {
     fixture = TestBed.createComponent(CurrencyComponent);
     component = fixture.componentInstance;
-    component.control = new Control(ControlType.CURRENCY, 'label', 'value', false, CurrencySymbol.EUR, null)
+    component.control = new Control(ControlType.CURRENCY, 'label', '123123', false, CurrencySymbol.EUR, 3);
     fixture.detectChanges();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('should format currency', () => {
+    expect(component.formattedValue).toBe('123,123.000');
   });
 });

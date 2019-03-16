@@ -8,6 +8,7 @@ import {WidgetsComponent} from '../widgets.component';
 import {WidgetsInitializerComponent} from '../../widgets-initializer/widgets-initializer.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {CurrencyComponent} from '../../controls/currency/currency.component';
+import {InputComponent} from '../../controls/input/input.component';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -26,6 +27,7 @@ describe('WidgetComponent', () => {
         WidgetComponent,
         SectionComponent,
         CurrencyComponent,
+        InputComponent,
       ]
     })
       .compileComponents();

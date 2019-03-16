@@ -9,6 +9,7 @@ import {WidgetComponent} from '../widgets/widget/widget.component';
 import {SectionComponent} from '../widgets/widget/section/section.component';
 import {APP_BASE_HREF} from '@angular/common';
 import {CurrencyComponent} from '../controls/currency/currency.component';
+import {InputComponent} from '../controls/input/input.component';
 
 describe('WidgetsInitializerComponent', () => {
   let component: WidgetsInitializerComponent;
@@ -28,6 +29,7 @@ describe('WidgetsInitializerComponent', () => {
         WidgetComponent,
         SectionComponent,
         CurrencyComponent,
+        InputComponent,
       ],
       providers: [
         {provide: APP_BASE_HREF, useValue: '/'},

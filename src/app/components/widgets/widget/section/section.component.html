@@ -4,14 +4,7 @@
     <div class="form-row">
       <div class="col" *ngFor="let dummy of ' '.repeat(section.columns).split(''), let idx = index">
         <ng-container *ngFor="let control of controlColumns[idx]">
-          <div class="form-group" *ngIf="control.type == inputType">
-            <label >{{ control.label }}</label>
-            <input type="text"
-                   class="form-control"
-                   value="{{ control.value }}"
-                   [attr.required]="control.required"
-                   placeholder="City" />
-          </div>
+          <app-input  *ngIf="control.type == inputType" [control]="control"></app-input>
           <app-currency *ngIf="control.type == currencyType" [control]="control"></app-currency>
         </ng-container>
       </div>

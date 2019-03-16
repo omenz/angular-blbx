@@ -12,6 +12,7 @@ import { WidgetComponent } from './components/widgets/widget/widget.component';
 import { SectionComponent } from './components/widgets/widget/section/section.component';
 import {APP_BASE_HREF} from '@angular/common';
 import { CurrencyComponent } from './components/controls/currency/currency.component';
+import { InputComponent } from './components/controls/input/input.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CurrencyComponent } from './components/controls/currency/currency.compo
     WidgetComponent,
     SectionComponent,
     CurrencyComponent,
+    InputComponent,
   ],
   imports: [
     BrowserModule,
