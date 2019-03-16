@@ -3,13 +3,16 @@
   <form>
     <div class="form-row">
       <div class="col" *ngFor="let dummy of ' '.repeat(section.columns).split(''), let idx = index">
-        <div class="form-group" *ngFor="let control of controlColumns[idx]">
-          <label>{{ control.label }}</label>
-          <input type="text"
-                 class="form-control"
-                 value="{{ control.value }}"
-                 placeholder="City" />
-        </div>
+        <ng-container *ngFor="let control of controlColumns[idx]">
+          <div class="form-group" *ngIf="control.type == inputType">
+            <label >{{ control.label }}</label>
+            <input type="text"
+                   class="form-control"
+                   value="{{ control.value }}"
+                   placeholder="City" />
+          </div>
+          <app-currency *ngIf="control.type == currencyType" [control]="control"></app-currency>
+        </ng-container>
       </div>
     </div>
   </form>

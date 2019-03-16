@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { WidgetComponent } from './components/widgets/widget/widget.component';
 import { SectionComponent } from './components/widgets/widget/section/section.component';
 import {APP_BASE_HREF} from '@angular/common';
+import { CurrencyComponent } from './components/controls/currency/currency.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import {APP_BASE_HREF} from '@angular/common';
     WidgetsInitializerComponent,
     WidgetComponent,
     SectionComponent,
+    CurrencyComponent,
   ],
   imports: [
     BrowserModule,

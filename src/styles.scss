@@ -1,7 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
 @import 'css/color-palette';
+* {
+  // OS X font, taken from provided Adobe Photoshop File
+  font-family: "Helvetica Neue Light", "HelveticaNeue-Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
 body {
   background-color: $cyan;
-  // OS X font, taken from provided Adobe Photoshop File
-  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 }

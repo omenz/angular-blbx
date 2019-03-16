@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {Control, Section} from '../../../../core/domain/widget';
+import {Control, ControlType, Section} from '../../../../core/domain/widget';
 
 @Component({
   selector: 'app-section',
@@ -10,7 +10,8 @@ export class SectionComponent implements OnInit {
   constructor() { }
   @Input() section: Section;
   controlColumns: Array<Array<Control>> = [];
-
+  inputType: ControlType = ControlType.INPUT;
+  currencyType: ControlType = ControlType.CURRENCY;
   private static splitControlsArrayIntoChunks(controls: Array<Control>, chunkSize: number): Array<Array<Control>> {
     const res: Array<Array<Control>> = [];
     for (let idx = 0, len = controls.length; idx < len; idx += chunkSize) {

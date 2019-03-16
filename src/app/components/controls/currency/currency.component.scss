@@ -1,0 +1,17 @@
+@import "../../../../css/form.scss";
+
+div.form-group {
+  position: relative;
+  display: block;
+
+  input {
+    padding-left: 20px;
+    display: inline;
+  }
+  span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    font-size: 0.875em;
+  }
+}
