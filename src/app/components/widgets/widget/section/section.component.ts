@@ -7,9 +7,17 @@ import {Control, Section} from '../../../../core/domain/widget';
   styleUrls: ['./section.component.scss']
 })
 export class SectionComponent implements OnInit {
-  @Input() section: Section;
-  controlColumns: Array[Control[]] = [];
   constructor() { }
+  @Input() section: Section;
+  controlColumns: Array<Array<Control>> = [];
+
+  private static splitControlsArrayIntoChunks(controls: Array<Control>, chunkSize: number): Array<Array<Control>> {
+    const res: Array<Array<Control>> = [];
+    for (let idx = 0, len = controls.length; idx < len; idx += chunkSize) {
+      res.push(controls.slice(idx, idx + chunkSize));
+    }
+    return res;
+  }
 
   ngOnInit() {
     this.splitControlsByColumns();
@@ -20,15 +28,7 @@ export class SectionComponent implements OnInit {
     const controlCount = controls.length;
     if (controls && columns) {
       const chunkSize = Math.ceil(controlCount / columns);
-      this.controlColumns = this.splitControlsArrayIntoChunks(controls, chunkSize);
+      this.controlColumns = SectionComponent.splitControlsArrayIntoChunks(controls, chunkSize);
     }
-  }
-
-  private splitControlsArrayIntoChunks(controls: Array[Control], chunkSize: number): Array[Control[]] {
-    const res: Array[Section[]] = [];
-    for (let idx = 0, len = controls.length; idx < len; idx += chunkSize) {
-      res.push(controls.slice(idx, idx + chunkSize));
-    }
-    return res;
   }
 }
