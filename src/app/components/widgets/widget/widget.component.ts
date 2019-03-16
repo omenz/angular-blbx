@@ -10,7 +10,5 @@ export class WidgetComponent implements OnInit {
   @Input() widget: Widget;
 
   ngOnInit() {
-    console.log('Widget initialized: ');
-    console.log(this.widget);
   }
 }

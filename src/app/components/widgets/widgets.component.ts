@@ -5,7 +5,7 @@ import {Widgets} from '../../core/domain/widget';
 import {Observable} from 'rxjs';
 
 @Component({
-  selector: 'app-form',
+  selector: 'app-widgets',
   templateUrl: './widgets.component.html',
   styleUrls: ['./widgets.component.scss'],
 })

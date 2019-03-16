@@ -1,0 +1,16 @@
+@import 'color-palette';
+
+input {
+  height: 43px;
+  border: 1px solid $light-gray;
+  border-left: 2px solid $green;
+  border-radius: 5px 0 5px 5px;
+  font-size: 0.875em;
+  padding: 0 8px;
+}
+
+label {
+  color: $dark-gray;
+  font-size: 0.75em;
+  margin-bottom: 5px;
+}

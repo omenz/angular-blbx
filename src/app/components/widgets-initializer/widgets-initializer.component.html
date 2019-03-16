@@ -1,9 +1,15 @@
 <div class="panel">
   <form [formGroup]="form">
-    <div class="form-group">
-      <label>Load data from url</label>
-      <input formControlName="dataUrl"/>
+    <div class="form-row align-items-center">
+      <div class="col-11">
+        <div class="form-group">
+          <label>Load data from url</label>
+          <input formControlName="dataUrl"/>
+        </div>
+      </div>
+      <div class="col-auto">
+        <button class="btn btn-success" [routerLink]="['/form', dataUrl()]">Load</button>
+      </div>
     </div>
-    <button class="btn btn-primary" [routerLink]="['/form', dataUrl()]">Load</button>
   </form>
 </div>

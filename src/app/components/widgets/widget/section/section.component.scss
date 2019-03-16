@@ -1,0 +1,20 @@
+@import '../../../../../css/form.scss';
+
+div.section-header {
+  border-top: 2px solid $light-gray;
+  border-bottom: 2px solid $light-gray;
+  padding: 7px 15px;
+  height: 36px;
+  background-color: $light-green;
+  color: $green;
+  font-weight: bold;
+  font-size: 0.8125em;
+}
+
+div.modal-body {
+  padding: 15px 15px;
+
+  div.form-group {
+    margin-bottom: 10px;
+  }
+}

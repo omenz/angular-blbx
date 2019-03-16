@@ -1,4 +1,15 @@
-<p>
-  Widget: {{ widget.name }}
-  <app-section *ngFor="let section of widget.items" [section]="section"></app-section>
-</p>
+<div class="modal">
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-btn left cancel" [routerLink]="['/']">Cancel</div>
+        <div class="modal-btn right primary">Save</div>
+        <h5 class="modal-title"> {{ widget.name }}</h5>
+      </div>
+      <div class="sections">
+        <app-section *ngFor="let section of widget.items" [section]="section"></app-section>
+      </div>
+      <div class="footer blur"></div>
+    </div>
+  </div>
+</div>

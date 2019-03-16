@@ -1,11 +1,19 @@
+@import "../../../css/form";
 div.panel {
   width: 50%;
-  margin: 100px auto;
+  margin: 7rem auto;
   border: 1px gray solid;
   padding: 20px;
-  border-radius: 3px;
+  border-radius: 10px;
+  background-color: $white;
 
   input {
     width: 100%;
+  }
+
+  button.btn {
+    top: 4px;
+    position: relative;
+    height: 43px;
   }
 }
