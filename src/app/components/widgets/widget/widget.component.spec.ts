@@ -3,6 +3,10 @@ import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {WidgetComponent} from './widget.component';
 import {Widget, WidgetType} from '../../../core/domain/widget';
 import {SectionComponent} from './section/section.component';
+import {AppRoutingModule} from '../../../app-routing.module';
+import {WidgetsComponent} from '../widgets.component';
+import {WidgetsInitializerComponent} from '../../widgets-initializer/widgets-initializer.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 describe('WidgetComponent', () => {
   let component: WidgetComponent;
@@ -10,7 +14,12 @@ describe('WidgetComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [WidgetComponent, SectionComponent]
+      imports: [
+        AppRoutingModule,
+        FormsModule,
+        ReactiveFormsModule,
+      ],
+      declarations: [WidgetsInitializerComponent, WidgetsComponent, WidgetComponent, SectionComponent]
     })
       .compileComponents();
   }));
