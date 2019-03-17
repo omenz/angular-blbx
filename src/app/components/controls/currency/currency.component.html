@@ -4,7 +4,8 @@
          class="form-control"
          maxlength="20"
          ngModel="{{ formattedValue }}"
-         [attr.required]="control.required"
+         [required]="control.required"
+         [class.validation-enabled]="control.required"
          (blur)="onUpdate($event.target.value, $event.target)"/>
   <span class="currency-sign">{{ currencySign }}</span>
 </div>

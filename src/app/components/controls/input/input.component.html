@@ -2,6 +2,7 @@
   <label >{{ control.label }}</label>
   <input type="text"
          class="form-control"
-         value="{{ control.value }}"
-         [attr.required]="control.required"/>
+         ngModel="{{ control.value }}"
+         [class.validation-enabled]="control.required"
+         [required]="control.required"/>
 </div>
